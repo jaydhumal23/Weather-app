@@ -10,6 +10,7 @@ document
     }
   });
 async function Weather() {
+
   const cityName = document.getElementById("city-name").value.trim();
   let result = document.getElementById("weather-output");
   result.innerHTML = "";
@@ -31,6 +32,7 @@ async function Weather() {
     const data = await response.json();
     console.log(data);
     let output = `
+
         <p>${data.location.name}, ${data.location.country}</p>
         <p>${data.current.temp_c}&deg;C</p>
         <p>${data.location.localtime}</p>
@@ -39,4 +41,8 @@ async function Weather() {
   } catch (err) {
     result.textContent = `Error: ${err.message}`;
   }
+  document.getElementById("weather-output").style.backgroundColor = "rgba(143, 137, 137, 0.12)";
+  document.getElementById("weather-output").style.boxShadow = "5px 5px 20px rgba(102, 93, 93, 0.2)";
+
+
 }

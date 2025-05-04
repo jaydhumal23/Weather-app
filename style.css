@@ -49,9 +49,17 @@ body {
   color: #5a4fcf;
   font-size: 2rem;
 }
-#weather-output {
+#weather-output{
+  
+  backdrop-filter: blur(10px);
   font-size: 1.4rem;
-  color: #5a4fcf;
+  color:rgb(245, 242, 242);
+  background-color: #f5f5f500;
+  margin: auto;
+  padding: 3px;
+  border-radius: 10px;
+  width: 30vw;
+
 }
 #city-name {
   margin-bottom: 20px;
@@ -65,6 +73,7 @@ body {
   border: none;
   line-height: 1.15;
   box-shadow: 0px 10px 20px -18px;
+
 }
 
 #city-name:hover {
@@ -94,5 +103,10 @@ body {
   .container:hover{
     width: 76vw;
     height: 58vh;
+  }
+  #weather-output{
+    margin-top: 20px;
+    width: 58vw;
+    height: 25vh;
   }
 }
